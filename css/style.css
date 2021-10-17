@@ -1,0 +1,27 @@
+.inputs-container {
+  text-align: center;
+}
+
+.data-container {
+  margin-top: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+.data-container .headCell {
+  background: #ceff9d;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data-container .cell {
+  background: #9dd0ff;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
