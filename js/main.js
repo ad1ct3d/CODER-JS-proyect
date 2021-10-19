@@ -51,7 +51,7 @@ function horarioEntrada() {
 
                 // crear nombre
                 let cell = document.createElement('div');
-                cell.innerHTML = 'Mario';
+                cell.innerHTML = i.name;
                 cell.className = 'cell';
                 container.appendChild(cell)
 
@@ -96,7 +96,7 @@ function horarioSalida() {
 
                 // crear nombre
                 let cell = document.createElement('div');
-                cell.innerHTML = 'Mario';
+                cell.innerHTML = i.name;
                 cell.className = 'cell';
                 container.appendChild(cell)
 
