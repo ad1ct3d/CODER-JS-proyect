@@ -10,6 +10,8 @@ let tabla = document.getElementById('dataContainer');
 // Funciones
 
 
+
+
 // printer
 
 // agregar un 0 si la hora es menor a 10
@@ -28,6 +30,8 @@ function timeTeller() {
     let time = h + ':' + m;
     
 };
+
+// ENTRADA
 
 function horarioEntrada() {
 
@@ -53,25 +57,33 @@ function horarioEntrada() {
                 let cell = document.createElement('div');
                 cell.innerHTML = i.name;
                 cell.className = 'cell';
+                cell.id = 'cell';
                 container.appendChild(cell)
 
                 // crear HE (vacio)
                 let cell2 = document.createElement('div');
                 cell2.innerHTML = time;
                 cell2.className = 'cell';
+                cell2.id = 'cell'
                 container.appendChild(cell2)
 
                 // crear HS
                 let cell3 = document.createElement('div');
                 cell3.innerHTML = '';
                 cell3.className = 'cell';
+                cell3.id = 'cell'
                 container.appendChild(cell3);
             }
             console.log(objEmpleados[i].name + ' entrada ' + time);
         }
     }
 
+    // animaciones
+    $('.cell').slideDown(480);
+
 }
+
+// SALIDA
 
 function horarioSalida() {
 
@@ -98,34 +110,46 @@ function horarioSalida() {
                 let cell = document.createElement('div');
                 cell.innerHTML = i.name;
                 cell.className = 'cell';
+                cell.id = 'cell';
                 container.appendChild(cell)
 
                 // crear HE (vacio)
                 let cell2 = document.createElement('div');
                 cell2.innerHTML = '';
                 cell2.className = 'cell';
+                cell2.id = 'cell'
                 container.appendChild(cell2)
 
                 // crear HS
                 let cell3 = document.createElement('div');
                 cell3.innerHTML = time;
                 cell3.className = 'cell';
+                cell3.id = 'cell'
                 container.appendChild(cell3);
+
+
             }
-
-
             console.log(objEmpleados[i].name + ' salida ' + time);
         }
     }
 
-
+    // animaciones
+    $('.cell').slideDown(480);
 }
 
 
 // ----EVENTOS----
 
 // Entrada
-btnEntrada.addEventListener('click', horarioEntrada);
+$('#btnEntrada').on('click', horarioEntrada);
 
 // salida
-btnSalida.addEventListener('click', horarioSalida)
+$('#btnSalida').on('click', horarioSalida);
+
+
+
+// ------ ANIMACIONES ------
+
+
+
+$('#dataContainer').slideDown(400);

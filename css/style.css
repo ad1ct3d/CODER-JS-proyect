@@ -1,3 +1,7 @@
+body {
+  background: #505050;
+}
+
 .inputs-container {
   text-align: center;
 }
@@ -22,6 +26,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.data-container #cell {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
