@@ -1,3 +1,5 @@
+// ------------| ENTIDADES |------------
+
 // Empleados
 let objEmpleados = [{id: 1234, name: 'Mario'}]
 
@@ -7,12 +9,7 @@ let btnSalida = document.getElementById('btnSalida');
 let tabla = document.getElementById('dataContainer');
 
 
-// Funciones
-
-
-
-
-// printer
+// ------------| FUNCIONES |------------
 
 // agregar un 0 si la hora es menor a 10
 function addZero(i) {
@@ -22,25 +19,15 @@ function addZero(i) {
     return i;
 };
 
-function timeTeller() {
-    let d = new Date ();
-    let h = addZero(d.getHours());
-    let m = addZero(d.getMinutes());
-
-    let time = h + ':' + m;
-    
-};
+// ---| PRINTER |---
 
 // ENTRADA
 
 function horarioEntrada() {
-
+    // leer el ID ingresado
     let idEmpleado = document.getElementById('idEmpleado').value;
 
-    let paso1 = JSON.parse(localStorage.getItem('objEmpleados'));
-
-    // al hacer click consologuea la hora si la id coinside
-
+    // buscar el ID ingresado en el array, si coincide, realizar entrada
     for(i = 0; i < objEmpleados.length; i++) {
         if(idEmpleado == objEmpleados[i].id) {
             let d = new Date ();
@@ -60,14 +47,14 @@ function horarioEntrada() {
                 cell.id = 'cell';
                 container.appendChild(cell)
 
-                // crear HE (vacio)
+                // crear HoraioEntrada
                 let cell2 = document.createElement('div');
                 cell2.innerHTML = time;
                 cell2.className = 'cell';
                 cell2.id = 'cell'
                 container.appendChild(cell2)
 
-                // crear HS
+                // crear HorarioSalida (vacio)
                 let cell3 = document.createElement('div');
                 cell3.innerHTML = '';
                 cell3.className = 'cell';
@@ -79,21 +66,18 @@ function horarioEntrada() {
     }
 
     // animaciones
-    $('.cell').slideDown(480);
+    $('.cell').slideDown(200);
 
 }
 
 // SALIDA
 
 function horarioSalida() {
-
-    
+    // leer el ID ingresado
     let idEmpleado = document.getElementById('idEmpleado').value;
 
-    let paso1 = JSON.parse(localStorage.getItem('objEmpleados'));
 
-    // al hacer click consologuea la hora si la id coinside
-
+    // buscar el ID ingresado en el array, si coincide, realizar salida
     for(i = 0; i < objEmpleados.length; i++) {
         if(idEmpleado == objEmpleados[i].id) {
             let d = new Date ();
@@ -113,14 +97,14 @@ function horarioSalida() {
                 cell.id = 'cell';
                 container.appendChild(cell)
 
-                // crear HE (vacio)
+                // crear HorarioEntrada (vacio)
                 let cell2 = document.createElement('div');
                 cell2.innerHTML = '';
                 cell2.className = 'cell';
                 cell2.id = 'cell'
                 container.appendChild(cell2)
 
-                // crear HS
+                // crear HorarioSalida
                 let cell3 = document.createElement('div');
                 cell3.innerHTML = time;
                 cell3.className = 'cell';
@@ -134,22 +118,14 @@ function horarioSalida() {
     }
 
     // animaciones
-    $('.cell').slideDown(480);
+    $('.cell').slideDown(200);
 }
 
 
-// ----EVENTOS----
+// ------------| EVENTOS |------------
 
 // Entrada
 $('#btnEntrada').on('click', horarioEntrada);
 
 // salida
 $('#btnSalida').on('click', horarioSalida);
-
-
-
-// ------ ANIMACIONES ------
-
-
-
-$('#dataContainer').slideDown(400);

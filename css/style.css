@@ -1,9 +1,54 @@
 body {
-  background: #505050;
+  background: #f0f0f0;
 }
 
 .inputs-container {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.inputs-container #header {
+  font-family: "Lato", sans-serif;
+  color: #222222;
+}
+.inputs-container .inputs {
+  max-height: 150px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputs-container .inputs .buttons #btnEntrada {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  background-color: #dbdbdb;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  cursor: pointer;
+}
+.inputs-container .inputs .buttons #btnSalida {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  background-color: #dbdbdb;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  cursor: pointer;
+}
+.inputs-container .inputs .subHeader {
+  font-family: "Lato", sans-serif;
+  color: #222222;
 }
 
 .data-container {
@@ -14,18 +59,33 @@ body {
   grid-gap: 10px;
 }
 .data-container .headCell {
-  background: #ceff9d;
+  background: #f0f0f0;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 }
 .data-container .cell {
-  background: #9dd0ff;
+  background: #acacac;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 }
 .data-container #cell {
   display: none;
