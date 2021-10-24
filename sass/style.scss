@@ -125,3 +125,30 @@ body {
         display: none;
     }
 }
+
+.printBtn-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .printBtn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 19px;
+        position: fixed;
+        bottom: 0;
+    
+        background-color: rgb(219, 219, 219);
+        height: 40px;
+        width: 100px;
+        margin: 10px;
+        border-radius: 5px;
+    
+        // sombra tipo manzana
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+        -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    
+        cursor: pointer;
+    }
+}

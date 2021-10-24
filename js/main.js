@@ -1,5 +1,8 @@
 // ------------| ENTIDADES |------------
 
+// SWAPI
+const URLGET = 'http https://swapi.dev/api/people';
+
 // Empleados
 let objEmpleados = [{id: 1234, name: 'Mario'}]
 
@@ -19,7 +22,7 @@ function addZero(i) {
     return i;
 };
 
-// ---| PRINTER |---
+// ---| HTML PRINTER |---
 
 // ENTRADA
 
