@@ -65,6 +65,8 @@ function horarioEntrada() {
                 container.appendChild(cell3);
             }
             console.log(objEmpleados[i].name + ' entrada ' + time);
+        } else {
+            alert('ingrese un ID valido')
         }
     }
 
@@ -117,6 +119,8 @@ function horarioSalida() {
 
             }
             console.log(objEmpleados[i].name + ' salida ' + time);
+        } else {
+            alert('ingrese un ID valido')
         }
     }
 
